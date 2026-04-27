@@ -1,36 +1,214 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/ITOQ-Hub-blueviolet?style=for-the-badge&logo=react" alt="ITOQ Hub" />
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-4-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind" />
+</p>
 
-## Getting Started
+# ITOQ Hub — Контент-платформа для креаторов
 
-First, run the development server:
+**ITOQ Hub** — это персональная AI-платформа для управления полным циклом создания контента: от идеи до публикации во все соцсети. Создана для YouTube-блогеров, контент-мейкеров и SMM-специалистов, которые хотят автоматизировать рутину и сфокусироваться на творчестве.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Зачем это нужно?
+
+Создание контента — это не только съёмка. Это конвейер:
+
+```
+Идея → Сценарий → Съёмка → Монтаж → Превью → Описание → Публикация на 7 платформ
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Каждый этап требует отдельных инструментов: блокнот для идей, ChatGPT для текстов, Canva для превью, ручное копирование описаний в каждую соцсеть...
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**ITOQ Hub объединяет всё в одном месте** и добавляет AI на каждом шагу.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Возможности
 
-To learn more about Next.js, take a look at the following resources:
+### 🏠 Дашборд
+Главная панель с обзором всего контента: сколько материалов в работе, что готово к публикации, свежие идеи и статистика по неделям.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🤖 AI-Генератор контента
+- Генерация **сценариев** для Shorts, длинных видео, Reels и постов
+- Генерация **хуков** (цепляющих первых фраз)
+- Генерация **описаний** и **хэштегов**
+- Поддержка **OpenAI** (GPT-4o, GPT-4o-mini) и **OpenRouter** (Claude, Gemini, Llama и др.)
+- Настраиваемые промпт-шаблоны для каждого формата
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💡 Банк идей
+- Быстрое добавление идей с приоритетами (🔥 горячая / обычная / бэклог)
+- Источники: тренд, AI, конкурент, аудитория, личная
+- **AI-расширение** идеи: генерация заголовка, подтем, форматов и ключевых слов
+- Одним кликом — создание контента из идеи в Генераторе
 
-## Deploy on Vercel
+### 📅 Контент-календарь
+- Визуальная доска всех материалов по статусам: Идея → Сценарий → Снято → Смонтировано → Опубликовано
+- Быстрое переключение статусов
+- Цветовая кодировка по форматам
+- Привязка к платформам
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎨 Превью-студия
+- AI-генерация превью для YouTube через **fal.ai** (Flux 2) и **DALL-E 3**
+- 8 встроенных стилей промптов (драматический, минималистичный, неоновый и др.)
+- Загрузка своих фото для генерации на их основе
+- A/B тестирование — рейтинг и сравнение вариантов
+- Анализ конкурентных превью через GPT-4o Vision
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📤 Кросс-постинг
+- **Умные ссылки** — нажимаете «Открыть», соцсеть открывается с уже заполненным текстом:
+  - **X (Twitter)** — автозаполнение через intent/tweet
+  - **Facebook** — автозаполнение через sharer
+  - **Threads** — автозаполнение через intent/post
+  - **Telegram** — автозаполнение через t.me/share
+- **YouTube, TikTok, Instagram** — текст автоматически копируется в буфер, вставляете Ctrl+V
+- **Telegram бот** — прямая публикация в канал через Bot API (без ручного копирования)
+- Копирование хука, описания, сценария, хэштегов отдельно
+- Отметки о публикации на каждой платформе
+
+### ✅ Чек-листы
+4 готовых чек-листа для контент-мейкера:
+- **Ежедневный** — рутинные задачи
+- **Еженедельный** — планирование и анализ
+- **Продакшн Shorts** — полный цикл создания короткого видео
+- **Визуальный код** — стилистика и брендинг
+
+Интерактивные чекбоксы, прогресс-бар, сброс.
+
+### 📊 Аналитика
+- Ввод еженедельной статистики: количество Shorts, длинных видео, просмотры, удержание, подписчики, вовлечённость
+- SVG-графики: столбчатые диаграммы и линии роста
+- Кумулятивный трекинг подписчиков
+- Удаление и редактирование записей
+
+### ⚙️ Настройки
+- API-ключи: OpenAI, OpenRouter, fal.ai
+- Выбор LLM-модели и провайдера изображений
+- **Подключение соцсетей:**
+  - Telegram: Bot Token + Channel ID + тест отправки
+  - X (Twitter): OAuth 2.0 PKCE авторизация
+- Экспорт/импорт всех данных в JSON
+- Язык контента (RU/EN)
+
+---
+
+## Технологии
+
+| Технология | Назначение |
+|:--|:--|
+| **Next.js 16** | Фреймворк (App Router) |
+| **React 19** | UI-библиотека |
+| **TypeScript** | Типизация |
+| **Tailwind CSS 4** | Стилизация |
+| **Lucide React** | Иконки |
+| **OpenAI API** | GPT-4o, DALL-E 3 |
+| **OpenRouter** | Claude, Gemini, Llama |
+| **fal.ai** | Flux 2 (генерация изображений) |
+| **Telegram Bot API** | Прямая публикация в канал |
+| **X API v2** | OAuth 2.0 PKCE |
+| **localStorage** | Хранение данных в браузере |
+
+---
+
+## Быстрый старт
+
+### 1. Клонирование
+```bash
+git clone https://github.com/privatych/itoq-hub.git
+cd itoq-hub
+```
+
+### 2. Установка зависимостей
+```bash
+npm install
+```
+
+### 3. Запуск
+```bash
+npm run dev
+```
+
+Откройте **http://localhost:3000** в браузере.
+
+### 4. Настройка API-ключей
+Перейдите в **Настройки** и введите:
+- **OpenAI API Key** — для генерации контента и превью ([platform.openai.com](https://platform.openai.com))
+- **fal.ai API Key** — для генерации превью через Flux 2 ([fal.ai](https://fal.ai))
+- **OpenRouter API Key** *(опционально)* — для доступа к Claude, Gemini и др. ([openrouter.ai](https://openrouter.ai))
+
+### 5. Подключение соцсетей *(опционально)*
+- **Telegram**: создайте бота через [@BotFather](https://t.me/BotFather), добавьте его администратором канала
+- **X (Twitter)**: создайте приложение на [developer.x.com](https://developer.x.com), настройте OAuth 2.0
+
+---
+
+## Структура проекта
+
+```
+itoq-hub/
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── generate/       # AI-генерация контента
+│   │   │   ├── preview/        # AI-генерация превью
+│   │   │   ├── analyze/        # Анализ конкурентных превью
+│   │   │   ├── expand-idea/    # AI-расширение идей
+│   │   │   ├── post/
+│   │   │   │   ├── telegram/   # Telegram Bot API
+│   │   │   │   └── x/          # X API v2
+│   │   │   └── auth/
+│   │   │       └── x/          # X OAuth 2.0 PKCE
+│   │   ├── auth/x/callback/    # OAuth callback страница
+│   │   ├── page.tsx            # Главная страница
+│   │   ├── layout.tsx          # Layout с метаданными
+│   │   └── globals.css         # Глобальные стили + тема
+│   ├── components/
+│   │   ├── Dashboard.tsx       # Дашборд
+│   │   ├── Generator.tsx       # AI-генератор
+│   │   ├── IdeasBank.tsx       # Банк идей
+│   │   ├── ContentCalendar.tsx # Календарь контента
+│   │   ├── PreviewGenerator.tsx# Превью-студия
+│   │   ├── CrossPosting.tsx    # Кросс-постинг
+│   │   ├── ChecklistsPanel.tsx # Чек-листы
+│   │   ├── AnalyticsPanel.tsx  # Аналитика
+│   │   ├── SettingsPanel.tsx   # Настройки
+│   │   └── Sidebar.tsx         # Боковое меню
+│   └── lib/
+│       ├── types.ts            # TypeScript типы и константы
+│       ├── ContentContext.tsx   # Глобальное состояние (React Context)
+│       └── utils.ts            # Утилиты (cn)
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## Хранение данных
+
+Все данные хранятся **локально в браузере** (localStorage). Сервер не хранит ничего.
+
+| Ключ | Данные |
+|:--|:--|
+| `itoq_content` | Контент-элементы |
+| `itoq_settings` | Настройки и API-ключи |
+| `itoq_templates` | Промпт-шаблоны |
+| `itoq_checklists` | Прогресс чек-листов |
+| `itoq_stats` | Еженедельная статистика |
+| `itoq_ideas` | Банк идей |
+
+**Важно:** делайте регулярный экспорт через **Настройки → Экспорт данных**, чтобы не потерять данные при очистке браузера.
+
+---
+
+## Лицензия
+
+MIT
+
+---
+
+<p align="center">
+  Сделано с ❤️ для контент-креаторов
+</p>
